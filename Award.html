@@ -1,29 +1,191 @@
-<div class="card">
-<h2>🏅 โครงงานศิลปหัตถกรรม</h2>
-<p>ได้รับรางวัลเหรียญทองจากการแข่งขันโครงงานศิลปหัตถกรรม</p>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงาน | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#00c6ff,#0072ff,#00d4aa,#8fd3f4);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* เมนู */
+.menu{
+    background:rgba(0,0,0,.2);
+    backdrop-filter:blur(15px);
+    padding:18px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#ffe600;
+}
+
+/* หัวข้อ */
+.title{
+    text-align:center;
+    color:white;
+    font-size:55px;
+    margin-top:50px;
+    text-shadow:0 0 20px rgba(255,255,255,.8);
+}
+
+.subtitle{
+    text-align:center;
+    color:white;
+    font-size:20px;
+    margin:15px 0 40px;
+}
+
+/* กล่องการ์ด */
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding-bottom:60px;
+}
+
+/* การ์ด */
+.card{
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:25px;
+    padding:25px;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 25px rgba(255,255,255,.8);
+}
+
+/* กรอบสำหรับใส่รูป */
+.photo-box{
+    width:100%;
+    height:220px;
+    border:3px dashed rgba(255,255,255,.8);
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    color:white;
+    background:rgba(255,255,255,.1);
+    margin-bottom:20px;
+}
+
+.card h2{
+    text-align:center;
+    color:white;
+    margin-bottom:10px;
+}
+
+.card p{
+    text-align:center;
+    color:white;
+    line-height:1.7;
+}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:25px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="menu">
+    <a href="index.html">🏠 หน้าแรก</a>
+    <a href="Profile.html">👤 ประวัติส่วนตัว</a>
+    <a href="education.html">🎓 ประวัติการศึกษา</a>
+    <a href="award.html">🏆 ผลงาน</a>
+    <a href="contact.html">📞 ติดต่อ</a>
 </div>
 
-<div class="card">
-<h2>❤️ พันธมิตรอาสาสมัครกาชาด</h2>
-<p>เข้าร่วมกิจกรรม Art Sharing และโครงการจิตอาสา</p>
+<h1 class="title">🏆 ผลงานของฉัน 🏆</h1>
+
+<p class="subtitle">
+✨ ผลงาน • กิจกรรม • ประสบการณ์ • ความภาคภูมิใจ ✨
+</p>
+
+<div class="container">
+
+    <div class="card">
+        <div class="photo-box">📷</div>
+        <h2>โครงงานศิลปหัตถกรรม</h2>
+        <p>ได้รับรางวัลจากการแข่งขันโครงงานศิลปหัตถกรรม</p>
+    </div>
+
+    <div class="card">
+        <div class="photo-box">📷</div>
+        <h2>พันธมิตรอาสาสมัครกาชาด</h2>
+        <p>เข้าร่วมกิจกรรม Art Sharing และกิจกรรมจิตอาสา</p>
+    </div>
+
+    <div class="card">
+        <div class="photo-box">📷</div>
+        <h2>STAFF ค่าย STEAM</h2>
+        <p>ปฏิบัติหน้าที่เป็นทีมงานในการจัดกิจกรรมค่าย STEAM</p>
+    </div>
+
+    <div class="card">
+        <div class="photo-box">📷</div>
+        <h2>ฝึกประสบการณ์</h2>
+        <p>ฝึกประสบการณ์ ณ โรงพยาบาลมหาวิทยาลัยบูรพา</p>
+    </div>
+
+    <div class="card">
+        <div class="photo-box">📷</div>
+        <h2>จิตอาสา</h2>
+        <p>ปฏิบัติงานจิตอาสาและร่วมกิจกรรมเพื่อสังคม</p>
+    </div>
+
+    <div class="card">
+        <div class="photo-box">📷</div>
+        <h2>กิจกรรมและการอบรม</h2>
+        <p>เข้าร่วมกิจกรรมและการอบรมเพื่อพัฒนาความรู้และทักษะอย่างต่อเนื่อง</p>
+    </div>
+
 </div>
 
-<div class="card">
-<h2>💡 STAFF ค่าย STEAM</h2>
-<p>ปฏิบัติหน้าที่เป็นทีมงานในการจัดกิจกรรมค่าย STEAM</p>
-</div>
+<footer>
+© 2026 Portfolio by Siriporn
+</footer>
 
-<div class="card">
-<h2>🏥 ฝึกประสบการณ์</h2>
-<p>ฝึกประสบการณ์ ณ โรงพยาบาลมหาวิทยาลัยบูรพา</p>
-</div>
-
-<div class="card">
-<h2>🌟 จิตอาสาโรงพยาบาลพนัสนิคม</h2>
-<p>ปฏิบัติงานจิตอาสาและร่วมกิจกรรมเพื่อสังคม</p>
-</div>
-
-<div class="card">
-<h2>🎓 กิจกรรมและการอบรม</h2>
-<p>เข้าร่วมกิจกรรมและการอบรมเพื่อพัฒนาความรู้และทักษะอย่างต่อเนื่อง</p>
-</div>
+</body>
+</html>
