@@ -1,13 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ประวัติส่วนตัว</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Tahoma,sans-serif;
+            background:linear-gradient(135deg,#98FB98,#66CDAA,#20B2AA);
+        }
+
+        .menu{
+            background:#006400;
+            padding:18px;
+            text-align:center;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin:20px;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .menu a:hover{
+            color:yellow;
+        }
+
+        .card{
+            width:500px;
+            margin:40px auto;
+            background:white;
+            border-radius:20px;
+            padding:30px;
+            text-align:center;
+            box-shadow:0 0 20px gray;
+        }
+
+        .profile{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            object-fit:cover;
+            border:6px solid green;
+            box-shadow:0 0 20px green;
+        }
+
+        .profile:hover{
+            transform:scale(1.05);
+            transition:0.5s;
+        }
+
+        h1{
+            color:darkgreen;
+        }
+
+        p{
+            font-size:20px;
+            line-height:2;
+        }
+
+        footer{
+            text-align:center;
+            color:white;
+            padding:20px;
+        }
+    </style>
 </head>
+
 <body>
-<h1>ประวัติส่วนตัว</h1>
-<p>
-ชื่อ ศิริพร คนาจันทร์แสง <br>
-ชื่อเล่น ลูกแก้ว <br>
-</p>
+
+<div class="menu">
+    <a href="index.html">🏠 หน้าแรก</a>
+    <a href="Profile.html">👤 ประวัติส่วนตัว</a>
+    <a href="education.html">🎓 ประวัติการศึกษา</a>
+    <a href="Award.html">🏆 ผลงาน</a>
+    <a href="contact.html">📞 ติดต่อ</a>
+</div>
+
+<div class="card">
+
+    <img src="images/myphoto.jpg" alt="รูปภาพของศิริพร" class="profile">
+
+    <h1>👤 ประวัติส่วนตัว</h1>
+
+    <p>
+        <strong>ชื่อ :</strong> ศิริพร คนาจันทร์แสง<br>
+        <strong>ชื่อเล่น :</strong> ลูกแก้ว<br>
+        <strong>อายุ :</strong> 17 ปี<br>
+        <strong>กำลังศึกษา :</strong> โรงเรียนพานทอง<br>
+        <strong>งานอดิเรก :</strong> อ่านนิยาย
+    </p>
+
+</div>
+
+<footer>
+    © 2026 Portfolio by Siriporn
+</footer>
+
 </body>
 </html>
