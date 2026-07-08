@@ -1,184 +1,39 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>award</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Tahoma,sans-serif;
-}
-
-body{
-    background:linear-gradient(-45deg,#98FB98,#66CDAA,#20B2AA,#7CFC00);
-    background-size:400% 400%;
-    animation:bg 10s ease infinite;
-}
-
-@keyframes bg{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-.menu{
-    background:#006400;
-    padding:18px;
-    text-align:center;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin:18px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:yellow;
-    text-shadow:0 0 10px yellow;
-}
-
-h1{
-    text-align:center;
-    color:white;
-    margin:35px;
-    font-size:45px;
-    text-shadow:0 0 15px green;
-}
-
-.profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    display:block;
-    margin:auto;
-    object-fit:cover;
-    border:5px solid white;
-    box-shadow:0 0 25px white;
-    transition:.5s;
-}
-
-.profile:hover{
-    transform:scale(1.08) rotate(5deg);
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:40px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:rgba(255,255,255,.2);
-    backdrop-filter:blur(15px);
-    border-radius:25px;
-    padding:20px;
-    text-align:center;
-    border:2px solid rgba(255,255,255,.3);
-    box-shadow:0 8px 20px rgba(0,0,0,.3);
-    transition:.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px) scale(1.03);
-    box-shadow:0 0 25px white;
-}
-
-.award{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:15px;
-    margin-bottom:15px;
-    border:3px solid white;
-}
-
-.card h2{
-    color:white;
-    margin:10px 0;
-}
-
-.card p{
-    color:white;
-    line-height:1.7;
-    font-size:18px;
-}
-
-footer{
-    text-align:center;
-    color:white;
-    padding:25px;
-}
-</style>
-
-</head>
-<body>
-
-<div class="menu">
-<a href="index.html">🏠 หน้าแรก</a>
-<a href="Profile.html">👤 ประวัติส่วนตัว</a>
-<a href="education.html">🎓 ประวัติการศึกษา</a>
-<a href="award.html">🏆 ผลงาน</a>
-<a href="contact.html">📞 ติดต่อ</a>
-</div>
-
-<h1>🏆 ผลงานและความภาคภูมิใจ 🏆</h1>
-
-<img src="images/myphoto.jpg" class="profile">
-
 <div class="container">
 
-<div class="card">
-<img src="images/award1.jpg" class="award">
-<h2>🥇 โครงงานศิลปหัตถกรรม</h2>
-<p>ได้รับรางวัลเหรียญทอง จากการแข่งขันโครงงานศิลปหัตถกรรม ประเภทการทดลอง</p>
+    <div class="card">
+        <div class="placeholder">🏆</div>
+        <h2>🥇 โครงงานศิลปหัตถกรรม</h2>
+        <p>ได้รับรางวัลเหรียญทอง จากการแข่งขันโครงงานศิลปหัตถกรรม ประเภทการทดลอง</p>
+    </div>
+
+    <div class="card">
+        <div class="placeholder">❤️</div>
+        <h2>พันธมิตรอาสาสมัครกาชาด</h2>
+        <p>เข้าร่วมโครงการ Art Sharing เพ้นท์ถุงผ้าจากหัวใจ สู่จุดรับยาผู้ป่วย</p>
+    </div>
+
+    <div class="card">
+        <div class="placeholder">💡</div>
+        <h2>STAFF ค่าย STEAM</h2>
+        <p>ปฏิบัติหน้าที่เป็นทีมงานในการจัดกิจกรรมค่าย STEAM</p>
+    </div>
+
+    <div class="card">
+        <div class="placeholder">🏫</div>
+        <h2>ค่ายเปิดบ้านอาจารย์ใหญ่</h2>
+        <p>เข้าร่วมโครงการค่ายเปิดบ้านอาจารย์ใหญ่ เพื่อเรียนรู้ด้านวิชาชีพ</p>
+    </div>
+
+    <div class="card">
+        <div class="placeholder">🏥</div>
+        <h2>ฝึกประสบการณ์</h2>
+        <p>เข้าฝึกประสบการณ์ ณ โรงพยาบาลมหาวิทยาลัยบูรพา</p>
+    </div>
+
+    <div class="card">
+        <div class="placeholder">🌟</div>
+        <h2>จิตอาสาโรงพยาบาลพนัสนิคม</h2>
+        <p>เข้าฝึกประสบการณ์และปฏิบัติงานจิตอาสา ณ โรงพยาบาลพนัสนิคม</p>
+    </div>
+
 </div>
-
-<div class="card">
-<img src="images/award2.jpg" class="award">
-<h2>❤️ พันธมิตรอาสาสมัครกาชาด</h2>
-<p>เข้าร่วมโครงการ Art Sharing เพ้นท์ถุงผ้าจากหัวใจ สู่จุดรับยาผู้ป่วย</p>
-</div>
-
-<div class="card">
-<img src="images/award3.jpg" class="award">
-<h2>💡 STAFF ค่าย STEAM</h2>
-<p>ปฏิบัติหน้าที่เป็นทีมงานในการจัดกิจกรรมค่าย STEAM</p>
-</div>
-
-<div class="card">
-<img src="images/award4.jpg" class="award">
-<h2>🏫 ค่ายเปิดบ้านอาจารย์ใหญ่</h2>
-<p>เข้าร่วมโครงการค่ายเปิดบ้านอาจารย์ใหญ่ เพื่อเรียนรู้ด้านวิชาชีพ</p>
-</div>
-
-<div class="card">
-<img src="images/award5.jpg" class="award">
-<h2>🏥 ฝึกประสบการณ์</h2>
-<p>เข้าฝึกประสบการณ์ ณ โรงพยาบาลมหาวิทยาลัยบูรพา</p>
-</div>
-
-<div class="card">
-<img src="images/award6.jpg" class="award">
-<h2>🌟 จิตอาสาโรงพยาบาลพนัสนิคม</h2>
-<p>เข้าฝึกประสบการณ์และปฏิบัติงานจิตอาสา ณ โรงพยาบาลพนัสนิคม</p>
-</div>
-
-</div>
-
-<footer>
-© 2026 Portfolio by Siriporn
-</footer>
-
-</body>
-</html>
