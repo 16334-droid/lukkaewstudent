@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ประวัติการศึกษา</title>
 
     <style>
-        body{
+        *{
             margin:0;
-            font-family:Tahoma, sans-serif;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Tahoma,sans-serif;
+        }
+
+        body{
             background:linear-gradient(135deg,#98FB98,#66CDAA,#20B2AA);
         }
 
@@ -22,8 +26,8 @@
         .menu a{
             color:white;
             text-decoration:none;
-            font-size:20px;
-            margin:20px;
+            margin:18px;
+            font-size:18px;
             font-weight:bold;
         }
 
@@ -31,27 +35,35 @@
             color:yellow;
         }
 
-        .card{
-            width:700px;
+        .container{
+            width:80%;
+            max-width:800px;
             margin:40px auto;
+        }
+
+        .title{
+            text-align:center;
+            color:white;
+            margin-bottom:30px;
+            font-size:40px;
+        }
+
+        .card{
             background:white;
             border-radius:20px;
-            padding:30px;
-            box-shadow:0 0 20px gray;
+            padding:20px;
+            margin-bottom:20px;
+            box-shadow:0 8px 15px rgba(0,0,0,0.2);
+            border-left:10px solid #008000;
         }
 
-        h1{
-            text-align:center;
-            color:darkgreen;
+        .card h2{
+            color:#006400;
+            margin-bottom:10px;
         }
 
-        h2{
-            color:#228B22;
-        }
-
-        ul{
+        .card p{
             font-size:20px;
-            line-height:2;
         }
 
         footer{
@@ -61,7 +73,6 @@
             font-size:18px;
         }
     </style>
-
 </head>
 
 <body>
@@ -74,18 +85,29 @@
         <a href="contact.html">📞 ติดต่อ</a>
     </div>
 
-    <div class="card">
+    <div class="container">
 
-        <h1>🎓 ประวัติการศึกษา</h1>
+        <h1 class="title">🎓 ประวัติการศึกษา 🎓</h1>
 
-        <h2>ระดับการศึกษา</h2>
+        <div class="card">
+            <h2>📚 ระดับอนุบาล</h2>
+            <p>โรงเรียนวัฒนานุศาสน์</p>
+        </div>
 
-        <ul>
-            <li>📚 ระดับอนุบาล : โรงเรียนวัฒนานุศาสน์</li>
-            <li>📚 ระดับประถมศึกษา : โรงเรียนวัฒนานุศาสน์</li>
-            <li>📚 ระดับมัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์</li>
-            <li>📚 ระดับมัธยมศึกษาตอนปลาย : โรงเรียนพานทอง</li>
-        </ul>
+        <div class="card">
+            <h2>📖 ระดับประถมศึกษา</h2>
+            <p>โรงเรียนวัฒนานุศาสน์</p>
+        </div>
+
+        <div class="card">
+            <h2>🏫 ระดับมัธยมศึกษาตอนต้น</h2>
+            <p>โรงเรียนวัฒนานุศาสน์</p>
+        </div>
+
+        <div class="card">
+            <h2>🎓 ระดับมัธยมศึกษาตอนปลาย</h2>
+            <p>โรงเรียนพานทอง</p>
+        </div>
 
     </div>
 
@@ -94,5 +116,4 @@
     </footer>
 
 </body>
-
 </html>
