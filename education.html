@@ -194,6 +194,30 @@ footer{
 <footer>
 © 2026 Portfolio by Siriporn
 </footer>
+<script>
+setInterval(()=>{
+    const star=document.createElement("div");
+    star.innerHTML="✨";
+    star.style.position="fixed";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+    star.style.fontSize=(10+Math.random()*20)+"px";
+    star.style.pointerEvents="none";
+    star.style.animation="fade 2s linear";
+    document.body.appendChild(star);
 
+    setTimeout(()=>star.remove(),2000);
+},300);
+</script>
+    @keyframes fade{
+    from{
+        opacity:1;
+        transform:scale(0);
+    }
+    to{
+        opacity:0;
+        transform:scale(1.5);
+    }
+}
 </body>
 </html>
