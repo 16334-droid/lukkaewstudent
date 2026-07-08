@@ -68,6 +68,15 @@
             color:white;
             padding:20px;
         }
+        /* เอฟเฟกต์หิมะ */
+.snowflake{
+    position:fixed;
+    top:-10%;
+    color:white;
+    user-select:none;
+    pointer-events:none;
+    z-index:9999;
+}
     </style>
 </head>
 
@@ -100,6 +109,39 @@
 <footer>
     © 2026 Portfolio by Siriporn
 </footer>
+<script>
+const snowCount = 80;
 
+for(let i=0;i<snowCount;i++){
+
+    const snow = document.createElement("div");
+    snow.className = "snowflake";
+    snow.innerHTML = ["❄","❅","❆"][Math.floor(Math.random()*3)];
+
+    const size = Math.random()*18 + 10;
+    const left = Math.random()*100;
+    const duration = Math.random()*8 + 8;
+    const delay = Math.random()*10;
+
+    snow.style.left = left + "vw";
+    snow.style.fontSize = size + "px";
+    snow.style.opacity = Math.random()*0.5 + 0.5;
+
+    document.body.appendChild(snow);
+
+    snow.animate([
+        { transform:"translate(0,-10vh) rotate(0deg)" },
+        { transform:`translate(${Math.random()*40-20}px,30vh) rotate(90deg)` },
+        { transform:`translate(${Math.random()*60-30}px,60vh) rotate(180deg)` },
+        { transform:`translate(${Math.random()*40-20}px,100vh) rotate(360deg)` }
+    ],{
+        duration: duration*1000,
+        delay: delay*1000,
+        iterations: Infinity,
+        easing: "linear"
+    });
+
+}
+</script>
 </body>
 </html>
