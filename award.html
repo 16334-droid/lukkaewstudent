@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>award</title>
+<title>Award</title>
 
 <style>
 *{
@@ -16,7 +16,7 @@
 body{
     background:linear-gradient(-45deg,#98FB98,#66CDAA,#20B2AA,#7CFC00);
     background-size:400% 400%;
-    animation:bg 10s infinite ease;
+    animation:bg 10s ease infinite;
 }
 
 @keyframes bg{
@@ -82,42 +82,46 @@ h1{
     background:rgba(255,255,255,.2);
     backdrop-filter:blur(15px);
     border-radius:25px;
-    padding:25px;
+    padding:20px;
     text-align:center;
     border:2px solid rgba(255,255,255,.3);
     box-shadow:0 8px 20px rgba(0,0,0,.3);
-    transition:.5s;
+    transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-12px) scale(1.03);
+    transform:translateY(-10px) scale(1.03);
     box-shadow:0 0 25px white;
 }
 
-.icon{
-    font-size:65px;
+.award{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+    border:3px solid white;
 }
 
 .card h2{
     color:white;
-    margin:15px;
+    margin:10px 0;
 }
 
 .card p{
     color:white;
-    font-size:18px;
     line-height:1.7;
+    font-size:18px;
 }
 
 footer{
     text-align:center;
     color:white;
-    padding:30px;
+    padding:25px;
 }
 </style>
 
 </head>
-
 <body>
 
 <div class="menu">
@@ -135,39 +139,39 @@ footer{
 <div class="container">
 
 <div class="card">
-<div class="icon">🥇</div>
-<h2>เกียรติบัตรการแข่งขัน</h2>
-<p>โครงงานศิลปหัตถกรรม ประเภททดลอง ได้รับรางวัลเหรียญทอง</p>
+<img src="images/award1.jpg" class="award">
+<h2>🥇 โครงงานศิลปหัตถกรรม</h2>
+<p>ได้รับรางวัลเหรียญทอง จากการแข่งขันโครงงานศิลปหัตถกรรม ประเภทการทดลอง</p>
 </div>
 
 <div class="card">
-<div class="icon">💻</div>
-<h2>สร้างเว็บไซต์ Portfolio</h2>
-<p>โครงการพันธมิตรอาสาสมัครกาชาด จิตอาสาเพ้นท์ถุงผ้า Art Sharingเพ้นท์จากหัวใจ สู่จุดรับยาผู้ป่วย</p>
+<img src="images/award2.jpg" class="award">
+<h2>❤️ พันธมิตรอาสาสมัครกาชาด</h2>
+<p>เข้าร่วมโครงการ Art Sharing เพ้นท์ถุงผ้าจากหัวใจ สู่จุดรับยาผู้ป่วย</p>
 </div>
 
 <div class="card">
-<div class="icon">📚</div>
-<h2>กิจกรรมจิตอาสา</h2>
-<p>STAFFค่ายSTEAM</p>
+<img src="images/award3.jpg" class="award">
+<h2>💡 STAFF ค่าย STEAM</h2>
+<p>ปฏิบัติหน้าที่เป็นทีมงานในการจัดกิจกรรมค่าย STEAM</p>
 </div>
 
 <div class="card">
-<div class="icon">🌱</div>
-<h2>กิจกรรม</h2>
-<p>โครงการค่ายเปิดบ้านอาจารย์ใหญ่</p>
+<img src="images/award4.jpg" class="award">
+<h2>🏫 ค่ายเปิดบ้านอาจารย์ใหญ่</h2>
+<p>เข้าร่วมโครงการค่ายเปิดบ้านอาจารย์ใหญ่ เพื่อเรียนรู้ด้านวิชาชีพ</p>
 </div>
 
 <div class="card">
-<div class="icon">🏫</div>
-<h2>กิจกรรมจิตอาสา</h2>
-<p>เข้าฝึกประสบการณ์ที่โรงพยาบาลมหาวิทยาลัยบูรพา</p></p>
+<img src="images/award5.jpg" class="award">
+<h2>🏥 ฝึกประสบการณ์</h2>
+<p>เข้าฝึกประสบการณ์ ณ โรงพยาบาลมหาวิทยาลัยบูรพา</p>
 </div>
 
 <div class="card">
-<div class="icon">⭐</div>
-<h2>กิจกรรมจิตอาสา</h2>
-<p>เข้าฝึกประสบการณ์และจิตอาสาที่โรงพยาบาลพนัสนิคม</p>
+<img src="images/award6.jpg" class="award">
+<h2>🌟 จิตอาสาโรงพยาบาลพนัสนิคม</h2>
+<p>เข้าฝึกประสบการณ์และปฏิบัติงานจิตอาสา ณ โรงพยาบาลพนัสนิคม</p>
 </div>
 
 </div>
