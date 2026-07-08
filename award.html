@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏆 ผลงาน | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#00c9a7,#92fe9d,#00b4db,#0083b0);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    text-align:center;
+    color:white;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:55px;
+    text-shadow:0 0 20px rgba(255,255,255,.7);
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding-bottom:50px;
+}
+
+.card{
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.4);
+    padding:25px;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px white;
+}
+
+.photo{
+    height:180px;
+    border:3px dashed white;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    text-align:center;
+    color:white;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:white;
+    text-align:center;
+    line-height:1.7;
+}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🏆 MY AWARDS</h1>
+<p>ผลงาน • กิจกรรม • ความภาคภูมิใจ</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<div class="photo">🏅</div>
+<h2>โครงงานศิลปหัตถกรรม</h2>
+<p>ได้รับรางวัลจากการแข่งขันโครงงานศิลปหัตถกรรม</p>
+</div>
+
+<div class="card">
+<div class="photo">❤️</div>
+<h2>พันธมิตรอาสาสมัครกาชาด</h2>
+<p>เข้าร่วมโครงการ Art Sharing และกิจกรรมจิตอาสา</p>
+</div>
+
+<div class="card">
+<div class="photo">💡</div>
+<h2>STAFF ค่าย STEAM</h2>
+<p>ปฏิบัติหน้าที่เป็นทีมงานในการจัดกิจกรรมค่าย STEAM</p>
+</div>
+
+<div class="card">
+<div class="photo">🏥</div>
+<h2>ฝึกประสบการณ์</h2>
+<p>ฝึกประสบการณ์ ณ โรงพยาบาลมหาวิทยาลัยบูรพา</p>
+</div>
+
+<div class="card">
+<div class="photo">🌟</div>
+<h2>จิตอาสา</h2>
+<p>ปฏิบัติงานจิตอาสา ณ โรงพยาบาลพนัสนิคม</p>
+</div>
+
+<div class="card">
+<div class="photo">🎓</div>
+<h2>กิจกรรมอื่น ๆ</h2>
+<p>เข้าร่วมกิจกรรมและการอบรมเพื่อพัฒนาทักษะอย่างต่อเนื่อง</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Portfolio by Siriporn
+</footer>
+
+</body>
+</html>
