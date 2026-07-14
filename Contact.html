@@ -225,3 +225,88 @@ setInterval(()=>{
 
 </body>
 </html>
+<!-- ข้อมูลติดต่อ -->
+
+<div class="item">
+    <h2>📱 เบอร์โทรศัพท์</h2>
+    <p>061-4687186</p>
+</div>
+
+<div class="item">
+    <h2>📷 Instagram</h2>
+    <p>@kaew_24.12.51</p>
+</div>
+
+<div class="item">
+    <h2>📧 E-mail</h2>
+    <p>lookkaew24.com@gmail.com</p>
+</div>
+
+<div class="item">
+    <h2>💬 ช่องทางการติดต่อ</h2>
+    <p>
+        หากต้องการติดต่อ สอบถามข้อมูล หรือพูดคุยเกี่ยวกับผลงาน
+        สามารถติดต่อได้ผ่านช่องทางด้านบน
+        ยินดีต้อนรับและขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน 💚
+    </p>
+</div>
+
+</div>
+</div>
+
+<footer>
+    <h2>💚 Thank You For Visiting 💚</h2>
+    <p>Portfolio by Siriporn</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+
+/* เอฟเฟกต์ประกาย */
+setInterval(function(){
+
+let sparkle=document.createElement("div");
+sparkle.className="sparkle";
+
+let icon=["✨","💚","⭐","🌿"];
+sparkle.innerHTML=icon[Math.floor(Math.random()*icon.length)];
+
+sparkle.style.left=Math.random()*100+"vw";
+sparkle.style.top="-30px";
+sparkle.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(sparkle);
+
+setTimeout(function(){
+sparkle.remove();
+},6000);
+
+},250);
+
+/* เปลี่ยนสีหัวข้อ */
+const colors=[
+"#ffffff",
+"#00ffff",
+"#7fffd4",
+"#90ee90",
+"#00ffcc"
+];
+
+let i=0;
+
+setInterval(function(){
+
+document.querySelector(".title").style.color=colors[i];
+
+i++;
+
+if(i>=colors.length){
+i=0;
+}
+
+},1200);
+
+</script>
+
+</body>
+</html>
