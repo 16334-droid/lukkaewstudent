@@ -10,206 +10,148 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',Tahoma,sans-serif;
+    font-family:'Tahoma',sans-serif;
 }
 
 body{
     min-height:100vh;
-    background:linear-gradient(-45deg,#00d4aa,#00b4d8,#7fffd4,#90ee90);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#84fab0);
     background-size:400% 400%;
-    animation:bgMove 10s ease infinite;
-    overflow-x:hidden;
+    animation:bg 10s ease infinite;
 }
 
-@keyframes bgMove{
+@keyframes bg{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-.menu{
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(15px);
-    padding:18px;
-    text-align:center;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:yellow;
-    text-shadow:0 0 10px yellow;
-}
-
-h1{
-    text-align:center;
-    color:white;
-    margin-top:40px;
-    font-size:50px;
-    text-shadow:0 0 20px white;
-}
-
-.sub{
-    text-align:center;
-    color:white;
-    margin:15px;
-    font-size:20px;
-}
-
 .container{
     width:90%;
-    max-width:700px;
-    margin:40px auto;
+    max-width:650px;
+    padding:40px;
+    text-align:center;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
+    color:#fff;
+}
+
+.container h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.line{
+    width:100px;
+    height:5px;
+    background:#fff;
+    margin:auto;
+    border-radius:50px;
+    margin-bottom:30px;
 }
 
 .card{
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(18px);
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.item{
     background:rgba(255,255,255,.15);
-    border-radius:20px;
     padding:20px;
-    margin:20px 0;
+    border-radius:20px;
+    margin:18px 0;
     transition:.4s;
 }
 
-.item:hover{
-    transform:translateY(-8px) scale(1.02);
-    box-shadow:0 0 20px white;
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.25);
 }
 
-.item h2{
-    color:white;
+.icon{
+    font-size:40px;
     margin-bottom:10px;
 }
 
-.item p,
-.item a{
-    color:white;
+.card h2{
+    margin-bottom:8px;
+    font-size:24px;
+}
+
+.card p,
+.card a{
     font-size:20px;
+    color:#fff;
     text-decoration:none;
 }
 
+.card a:hover{
+    color:yellow;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    color:#fff;
+    background:#ff4b91;
+    font-size:20px;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#ff4b91;
+    transform:scale(1.08);
+}
+
 footer{
-    margin-top:40px;
-    text-align:center;
-    color:white;
-    padding:25px;
-}
-
-.star{
-    position:fixed;
-    color:white;
-    animation:fall 6s linear forwards;
-    pointer-events:none;
-}
-
-@keyframes fall{
-    from{
-        transform:translateY(-20px) rotate(0deg);
-        opacity:1;
-    }
-    to{
-        transform:translateY(110vh) rotate(360deg);
-        opacity:0;
-    }
+    margin-top:30px;
+    font-size:15px;
+    opacity:.8;
 }
 </style>
 
 </head>
 <body>
 
-<div class="menu">
-<a href="index.html">🏠 หน้าแรก</a>
-<a href="Profile.html">👤 ประวัติส่วนตัว</a>
-<a href="education.html">🎓 ประวัติการศึกษา</a>
-<a href="Award.html">🏆 ผลงาน</a>
-<a href="Contact.html">📞 ติดต่อ</a>
-</div>
-
-<h1>📞 CONTACT ME</h1>
-
-<p class="sub">
-สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
-</p>
-
 <div class="container">
 
+<h1>📞 Contact Me</h1>
+
+<div class="line"></div>
+
 <div class="card">
-
-<div class="item">
-<h2>📱 เบอร์โทรศัพท์</h2>
-<p>061-4687186</p>
+    <div class="icon">📱</div>
+    <h2>Phone</h2>
+    <p>061-4687186</p>
 </div>
 
-<div class="item">
-<h2>📷 Instagram</h2>
-<p>
-<a href="https://www.instagram.com/kaew_24.12.51?igsh=aXlreDRybmp6MWp2&utm_source=qr" target="_blank">
-@kaew_24.12.51
-</a>
-</p>
+<div class="card">
+    <div class="icon">📧</div>
+    <h2>Email</h2>
+    <a href="mailto:lookkaew24.com@gmail.com">
+        lookkaew24.com@gmail.com
+    </a>
 </div>
 
-<div class="item">
-<h2>📧 E-mail</h2>
-<p>
-<a href="mailto:lookkaew24.com@gmail.com">
-lookkaew24.com@gmail.com
-</a>
-</p>
+<div class="card">
+    <div class="icon">📷</div>
+    <h2>Instagram</h2>
+    <a href="https://www.instagram.com/kaew_24.12.51" target="_blank">
+        @kaew_24.12.51
+    </a>
 </div>
 
-<div class="item">
-<h2>💚 ข้อความ</h2>
-<p>
-ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน
-หากต้องการสอบถามข้อมูลหรือพูดคุยเกี่ยวกับผลงาน
-สามารถติดต่อได้ทุกช่องทางด้านบน
-</p>
-</div>
-
-</div>
-
-</div>
+<a href="index.html" class="btn">🏠 กลับหน้าหลัก</a>
 
 <footer>
-<h2>💚 Portfolio by Siriporn 💚</h2>
-<p>© 2026 All Rights Reserved</p>
+    © 2026 Portfolio | Designed by Kaew
 </footer>
 
-<script>
-setInterval(function(){
-
-let star=document.createElement("div");
-star.className="star";
-
-let icon=["✨","⭐","💚","🌿","💎"];
-star.innerHTML=icon[Math.floor(Math.random()*icon.length)];
-
-star.style.left=Math.random()*100+"vw";
-star.style.fontSize=(15+Math.random()*20)+"px";
-
-document.body.appendChild(star);
-
-setTimeout(function(){
-star.remove();
-},6000);
-
-},250);
-</script>
+</div>
 
 </body>
 </html>
