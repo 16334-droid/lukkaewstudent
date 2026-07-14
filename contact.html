@@ -10,7 +10,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Tahoma',sans-serif;
+    font-family:'Poppins',Tahoma,sans-serif;
 }
 
 body{
@@ -18,9 +18,10 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#84fab0);
+    overflow:hidden;
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1,#84fab0);
     background-size:400% 400%;
-    animation:bg 10s ease infinite;
+    animation:bg 12s ease infinite;
 }
 
 @keyframes bg{
@@ -29,82 +30,136 @@ body{
     100%{background-position:0% 50%;}
 }
 
+/* เอฟเฟกต์แสง */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.35;
+}
+
+body::before{
+    background:#ff4fa3;
+    top:-120px;
+    left:-120px;
+}
+
+body::after{
+    background:#67e8f9;
+    bottom:-120px;
+    right:-120px;
+}
+
 .container{
+    position:relative;
     width:90%;
-    max-width:650px;
+    max-width:700px;
     padding:40px;
     text-align:center;
-    border-radius:25px;
+    border-radius:30px;
     background:rgba(255,255,255,.18);
-    backdrop-filter:blur(15px);
-    box-shadow:0 10px 35px rgba(0,0,0,.3);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.3);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
     color:#fff;
 }
 
 .container h1{
-    font-size:45px;
-    margin-bottom:15px;
+    font-size:48px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px rgba(255,255,255,.8);
 }
 
 .line{
-    width:100px;
+    width:120px;
     height:5px;
     background:#fff;
-    margin:auto;
-    border-radius:50px;
-    margin-bottom:30px;
+    margin:15px auto 35px;
+    border-radius:20px;
 }
 
 .card{
     background:rgba(255,255,255,.15);
-    padding:20px;
-    border-radius:20px;
     margin:18px 0;
+    padding:22px;
+    border-radius:20px;
     transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    background:rgba(255,255,255,.25);
+    transform:translateY(-8px) scale(1.03);
+    background:rgba(255,255,255,.28);
+    box-shadow:0 0 20px rgba(255,255,255,.4);
 }
 
 .icon{
-    font-size:40px;
+    font-size:45px;
     margin-bottom:10px;
 }
 
 .card h2{
-    margin-bottom:8px;
-    font-size:24px;
+    margin-bottom:10px;
 }
 
 .card p,
 .card a{
-    font-size:20px;
     color:#fff;
     text-decoration:none;
+    font-size:20px;
 }
 
 .card a:hover{
     color:yellow;
 }
 
+.social{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+.social a{
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.2);
+    color:#fff;
+    text-decoration:none;
+    font-size:26px;
+    transition:.4s;
+}
+
+.social a:hover{
+    background:#fff;
+    color:#ff4b91;
+    transform:scale(1.15) rotate(10deg);
+}
+
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
+    margin-top:35px;
+    padding:15px 40px;
+    background:linear-gradient(45deg,#ff4b91,#ff6ec7);
+    color:#fff;
     border-radius:40px;
     text-decoration:none;
-    color:#fff;
-    background:#ff4b91;
     font-size:20px;
     transition:.4s;
+    box-shadow:0 10px 25px rgba(255,75,145,.4);
 }
 
 .btn:hover{
     background:#fff;
     color:#ff4b91;
-    transform:scale(1.08);
+    transform:translateY(-5px);
 }
 
 footer{
@@ -145,10 +200,16 @@ footer{
     </a>
 </div>
 
+<div class="social">
+    <a href="tel:0614687186">📞</a>
+    <a href="mailto:lookkaew24.com@gmail.com">📧</a>
+    <a href="https://www.instagram.com/kaew_24.12.51" target="_blank">📷</a>
+</div>
+
 <a href="index.html" class="btn">🏠 กลับหน้าหลัก</a>
 
 <footer>
-    © 2026 Portfolio | Designed by Kaew
+    © 2026 Portfolio | Designed by Kaew ❤️
 </footer>
 
 </div>
