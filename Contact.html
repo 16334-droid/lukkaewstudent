@@ -18,7 +18,7 @@ body{
     background:linear-gradient(-45deg,#00c9a7,#00b4d8,#90ee90,#00d084);
     background-size:400% 400%;
     animation:bg 15s ease infinite;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
 @keyframes bg{
@@ -27,7 +27,6 @@ body{
     100%{background-position:0% 50%;}
 }
 
-/* วงกลมเรืองแสง */
 body::before,
 body::after{
     content:"";
@@ -51,7 +50,6 @@ body::after{
     right:-120px;
 }
 
-/* เมนู */
 .menu{
     background:rgba(255,255,255,.15);
     backdrop-filter:blur(20px);
@@ -75,7 +73,6 @@ body::after{
     text-shadow:0 0 15px yellow;
 }
 
-/* หัวข้อ */
 .title{
     text-align:center;
     color:white;
@@ -93,12 +90,10 @@ body::after{
 .subtitle{
     text-align:center;
     color:white;
-    margin-top:10px;
-    margin-bottom:40px;
+    margin:10px 0 40px;
     font-size:20px;
 }
 
-/* กล่องข้อมูล */
 .container{
     width:90%;
     max-width:700px;
@@ -135,18 +130,8 @@ body::after{
 .item p{
     color:white;
     font-size:20px;
-    word-break:break-word;
 }
 
-/* Footer */
-footer{
-    text-align:center;
-    color:white;
-    margin-top:40px;
-    padding:20px;
-}
-
-/* ประกาย */
 .sparkle{
     position:fixed;
     color:white;
@@ -164,88 +149,63 @@ footer{
         opacity:0;
     }
 }
+
+footer{
+    text-align:center;
+    color:white;
+    padding:30px;
+}
 </style>
 </head>
 
 <body>
 
 <div class="menu">
-    <a href="index.html">🏠 หน้าแรก</a>
-    <a href="Profile.html">👤 ประวัติส่วนตัว</a>
-    <a href="education.html">🎓 ประวัติการศึกษา</a>
-    <a href="award.html">🏆 ผลงาน</a>
-    <a href="Contact.html">📞 ติดต่อ</a>
+<a href="index.html">🏠 หน้าแรก</a>
+<a href="Profile.html">👤 ประวัติส่วนตัว</a>
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+<a href="award.html">🏆 ผลงาน</a>
+<a href="Contact.html">📞 ติดต่อ</a>
 </div>
 
 <h1 class="title">📞 CONTACT ME</h1>
 <p class="subtitle">✨ สามารถติดต่อได้ตามช่องทางด้านล่าง ✨</p>
 
 <div class="container">
-
-    <div class="card">
-
-        <div class="item">
-            <h2>📱 เบอร์โทรศัพท์</h2>
-            <p>061-4687186</p>
-        </div>
-
-        <div class="item">
-            <h2>📷 Instagram</h2>
-            <p>@kaew_24.12.51</p>
-        </div>
-
-        <div class="item">
-            <h2>📧 E-mail</h2>
-            <p>lookkaew24.com@gmail.com</p>
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-    <h3>💚 Portfolio by Siriporn 💚</h3>
-    <p>© 2026 All Rights Reserved</p>
-</footer>
-
-<script>
-setInterval(()=>{
-    let s=document.createElement("div");
-    s.className="sparkle";
-    s.innerHTML="✨";
-    s.style.left=Math.random()*100+"vw";
-    s.style.fontSize=(15+Math.random()*20)+"px";
-    document.body.appendChild(s);
-
-    setTimeout(()=>{
-        s.remove();
-    },6000);
-},300);
-</script>
-
-<!-- ข้อมูลติดต่อ -->
-
-<div class="item">
+<div class="card">
+    <div class="item">
     <h2>📱 เบอร์โทรศัพท์</h2>
     <p>061-4687186</p>
 </div>
 
 <div class="item">
     <h2>📷 Instagram</h2>
-    <p>@kaew_24.12.51</p>
+    <p>
+        <a href="https://www.instagram.com/kaew_24.12.51"
+           target="_blank"
+           style="color:white;text-decoration:none;">
+           @kaew_24.12.51
+        </a>
+    </p>
 </div>
 
 <div class="item">
     <h2>📧 E-mail</h2>
-    <p>lookkaew24.com@gmail.com</p>
+    <p>
+        <a href="mailto:lookkaew24.com@gmail.com"
+           style="color:white;text-decoration:none;">
+           lookkaew24.com@gmail.com
+        </a>
+    </p>
 </div>
 
 <div class="item">
     <h2>💬 ช่องทางการติดต่อ</h2>
     <p>
-        หากต้องการติดต่อ สอบถามข้อมูล หรือพูดคุยเกี่ยวกับผลงาน
-        สามารถติดต่อได้ผ่านช่องทางด้านบน
-        ยินดีต้อนรับและขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน 💚
+        ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน 💚<br>
+        หากต้องการสอบถามข้อมูล ติดต่อ หรือพูดคุยเกี่ยวกับผลงาน
+        สามารถติดต่อผ่าน Instagram, โทรศัพท์ หรือ E-mail ได้ตลอด
+        ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์ของฉัน ✨
     </p>
 </div>
 
@@ -259,51 +219,25 @@ setInterval(()=>{
 </footer>
 
 <script>
-
-/* เอฟเฟกต์ประกาย */
 setInterval(function(){
 
-let sparkle=document.createElement("div");
-sparkle.className="sparkle";
+    let sparkle=document.createElement("div");
+    sparkle.className="sparkle";
 
-let icon=["✨","💚","⭐","🌿"];
-sparkle.innerHTML=icon[Math.floor(Math.random()*icon.length)];
+    let icons=["✨","💚","⭐","🌿"];
+    sparkle.innerHTML=icons[Math.floor(Math.random()*icons.length)];
 
-sparkle.style.left=Math.random()*100+"vw";
-sparkle.style.top="-30px";
-sparkle.style.fontSize=(15+Math.random()*25)+"px";
+    sparkle.style.left=Math.random()*100+"vw";
+    sparkle.style.top="-30px";
+    sparkle.style.fontSize=(15+Math.random()*25)+"px";
 
-document.body.appendChild(sparkle);
+    document.body.appendChild(sparkle);
 
-setTimeout(function(){
-sparkle.remove();
-},6000);
+    setTimeout(function(){
+        sparkle.remove();
+    },6000);
 
 },250);
-
-/* เปลี่ยนสีหัวข้อ */
-const colors=[
-"#ffffff",
-"#00ffff",
-"#7fffd4",
-"#90ee90",
-"#00ffcc"
-];
-
-let i=0;
-
-setInterval(function(){
-
-document.querySelector(".title").style.color=colors[i];
-
-i++;
-
-if(i>=colors.length){
-i=0;
-}
-
-},1200);
-
 </script>
 
 </body>
