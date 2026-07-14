@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#00c9a7,#00b4d8,#90ee90,#00d084);
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+    overflow:hidden;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* วงกลมเรืองแสง */
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+
+body::before{
+    background:#7fffd4;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    background:#00ffff;
+    bottom:-120px;
+    right:-120px;
+}
+
+/* เมนู */
+.menu{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    padding:18px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:yellow;
+    text-shadow:0 0 15px yellow;
+}
+
+/* หัวข้อ */
+.title{
+    text-align:center;
+    color:white;
+    font-size:55px;
+    margin-top:40px;
+    text-shadow:0 0 20px white;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px white; }
+    to{ text-shadow:0 0 30px cyan; }
+}
+
+.subtitle{
+    text-align:center;
+    color:white;
+    margin-top:10px;
+    margin-bottom:40px;
+    font-size:20px;
+}
+
+/* กล่องข้อมูล */
+.container{
+    width:90%;
+    max-width:700px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.item{
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:20px;
+    margin:20px 0;
+    transition:.4s;
+}
+
+.item:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px white;
+}
+
+.item h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+.item p{
+    color:white;
+    font-size:20px;
+    word-break:break-word;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    color:white;
+    margin-top:40px;
+    padding:20px;
+}
+
+/* ประกาย */
+.sparkle{
+    position:fixed;
+    color:white;
+    pointer-events:none;
+    animation:fall 6s linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-20px) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+    <a href="index.html">🏠 หน้าแรก</a>
+    <a href="Profile.html">👤 ประวัติส่วนตัว</a>
+    <a href="education.html">🎓 ประวัติการศึกษา</a>
+    <a href="award.html">🏆 ผลงาน</a>
+    <a href="contact.html">📞 ติดต่อ</a>
+</div>
+
+<h1 class="title">📞 CONTACT ME</h1>
+<p class="subtitle">✨ สามารถติดต่อได้ตามช่องทางด้านล่าง ✨</p>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="item">
+            <h2>📱 เบอร์โทรศัพท์</h2>
+            <p>061-4687186</p>
+        </div>
+
+        <div class="item">
+            <h2>📷 Instagram</h2>
+            <p>@kaew_24.12.51</p>
+        </div>
+
+        <div class="item">
+            <h2>📧 E-mail</h2>
+            <p>lookkaew24.com@gmail.com</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <h3>💚 Portfolio by Siriporn 💚</h3>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+setInterval(()=>{
+    let s=document.createElement("div");
+    s.className="sparkle";
+    s.innerHTML="✨";
+    s.style.left=Math.random()*100+"vw";
+    s.style.fontSize=(15+Math.random()*20)+"px";
+    document.body.appendChild(s);
+
+    setTimeout(()=>{
+        s.remove();
+    },6000);
+},300);
+</script>
+
+</body>
+</html>
