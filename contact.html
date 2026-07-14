@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',Tahoma,sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -19,81 +21,108 @@ body{
     justify-content:center;
     align-items:center;
     overflow:hidden;
-    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1,#84fab0);
-    background-size:400% 400%;
-    animation:bg 12s ease infinite;
+    background:linear-gradient(-45deg,#00c9a7,#00e5ff,#6dd5ed,#89f7fe,#b7f8db);
+    background-size:500% 500%;
+    animation:bgMove 12s ease infinite;
+    position:relative;
 }
 
-@keyframes bg{
+@keyframes bgMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* เอฟเฟกต์แสง */
+/* วงแสง */
 body::before,
 body::after{
     content:"";
     position:absolute;
-    width:300px;
-    height:300px;
+    width:350px;
+    height:350px;
     border-radius:50%;
-    filter:blur(90px);
-    opacity:.35;
+    filter:blur(120px);
+    opacity:.45;
 }
 
 body::before{
-    background:#ff4fa3;
+    background:#00ffd5;
     top:-120px;
     left:-120px;
+    animation:light1 8s infinite alternate;
 }
 
 body::after{
-    background:#67e8f9;
+    background:#00bfff;
     bottom:-120px;
     right:-120px;
+    animation:light2 8s infinite alternate;
+}
+
+@keyframes light1{
+    to{transform:translate(80px,80px);}
+}
+
+@keyframes light2{
+    to{transform:translate(-80px,-80px);}
 }
 
 .container{
     position:relative;
     width:90%;
-    max-width:700px;
-    padding:40px;
+    max-width:720px;
+    padding:45px;
     text-align:center;
     border-radius:30px;
     background:rgba(255,255,255,.18);
-    backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.3);
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-    color:#fff;
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,.4),
+    0 0 60px rgba(0,255,200,.2);
+
+    animation:float 4s ease-in-out infinite;
 }
 
-.container h1{
+@keyframes float{
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+h1{
+    color:white;
     font-size:48px;
-    margin-bottom:10px;
-    text-shadow:0 0 10px rgba(255,255,255,.8);
+    text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
 }
 
 .line{
     width:120px;
     height:5px;
-    background:#fff;
-    margin:15px auto 35px;
-    border-radius:20px;
+    background:white;
+    border-radius:50px;
+    margin:18px auto 35px;
 }
 
 .card{
-    background:rgba(255,255,255,.15);
     margin:18px 0;
     padding:22px;
     border-radius:20px;
+    background:rgba(255,255,255,.15);
+    color:white;
     transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-8px) scale(1.03);
+    transform:translateY(-8px) scale(1.04);
     background:rgba(255,255,255,.28);
-    box-shadow:0 0 20px rgba(255,255,255,.4);
+
+    box-shadow:
+    0 0 25px #00ffff,
+    0 0 45px #00ffd5;
 }
 
 .icon{
@@ -107,65 +136,67 @@ body::after{
 
 .card p,
 .card a{
-    color:#fff;
-    text-decoration:none;
+    color:white;
     font-size:20px;
+    text-decoration:none;
 }
 
 .card a:hover{
-    color:yellow;
+    color:#00ffd5;
 }
 
 .social{
     display:flex;
     justify-content:center;
-    gap:15px;
-    margin-top:30px;
+    gap:18px;
+    margin-top:25px;
 }
 
 .social a{
-    width:55px;
-    height:55px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:50%;
-    background:rgba(255,255,255,.2);
-    color:#fff;
+    background:rgba(255,255,255,.18);
     text-decoration:none;
-    font-size:26px;
-    transition:.4s;
+    color:white;
+    font-size:28px;
+    transition:.5s;
 }
 
 .social a:hover{
-    background:#fff;
-    color:#ff4b91;
-    transform:scale(1.15) rotate(10deg);
+    transform:rotate(360deg) scale(1.2);
+    background:white;
+    color:#00bfa6;
+    box-shadow:0 0 25px #00ffff;
 }
 
 .btn{
     display:inline-block;
     margin-top:35px;
     padding:15px 40px;
-    background:linear-gradient(45deg,#ff4b91,#ff6ec7);
-    color:#fff;
-    border-radius:40px;
+    border-radius:50px;
+    background:linear-gradient(45deg,#00c9a7,#00bfff);
+    color:white;
     text-decoration:none;
     font-size:20px;
     transition:.4s;
-    box-shadow:0 10px 25px rgba(255,75,145,.4);
+    box-shadow:0 0 25px rgba(0,255,255,.5);
 }
 
 .btn:hover{
-    background:#fff;
-    color:#ff4b91;
-    transform:translateY(-5px);
+    transform:scale(1.08);
+    background:white;
+    color:#00a896;
 }
 
 footer{
     margin-top:30px;
+    color:white;
+    opacity:.9;
     font-size:15px;
-    opacity:.8;
 }
 </style>
 
@@ -179,37 +210,37 @@ footer{
 <div class="line"></div>
 
 <div class="card">
-    <div class="icon">📱</div>
-    <h2>Phone</h2>
-    <p>061-4687186</p>
+<div class="icon">📱</div>
+<h2>Phone</h2>
+<p>061-4687186</p>
 </div>
 
 <div class="card">
-    <div class="icon">📧</div>
-    <h2>Email</h2>
-    <a href="mailto:lookkaew24.com@gmail.com">
-        lookkaew24.com@gmail.com
-    </a>
+<div class="icon">📧</div>
+<h2>Email</h2>
+<a href="mailto:lookkaew24.com@gmail.com">
+lookkaew24.com@gmail.com
+</a>
 </div>
 
 <div class="card">
-    <div class="icon">📷</div>
-    <h2>Instagram</h2>
-    <a href="https://www.instagram.com/kaew_24.12.51" target="_blank">
-        @kaew_24.12.51
-    </a>
+<div class="icon">📷</div>
+<h2>Instagram</h2>
+<a href="https://www.instagram.com/kaew_24.12.51" target="_blank">
+@kaew_24.12.51
+</a>
 </div>
 
 <div class="social">
-    <a href="tel:0614687186">📞</a>
-    <a href="mailto:lookkaew24.com@gmail.com">📧</a>
-    <a href="https://www.instagram.com/kaew_24.12.51" target="_blank">📷</a>
+<a href="tel:0614687186">📞</a>
+<a href="mailto:lookkaew24.com@gmail.com">📧</a>
+<a href="https://www.instagram.com/kaew_24.12.51" target="_blank">📷</a>
 </div>
 
 <a href="index.html" class="btn">🏠 กลับหน้าหลัก</a>
 
 <footer>
-    © 2026 Portfolio | Designed by Kaew ❤️
+© 2026 Portfolio | Designed by Kaew 💚
 </footer>
 
 </div>
