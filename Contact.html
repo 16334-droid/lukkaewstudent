@@ -15,44 +15,21 @@
 
 body{
     min-height:100vh;
-    background:linear-gradient(-45deg,#00c9a7,#00b4d8,#90ee90,#00d084);
+    background:linear-gradient(-45deg,#00d4aa,#00b4d8,#7fffd4,#90ee90);
     background-size:400% 400%;
-    animation:bg 12s ease infinite;
+    animation:bgMove 10s ease infinite;
     overflow-x:hidden;
 }
 
-@keyframes bg{
+@keyframes bgMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-body::before,
-body::after{
-    content:"";
-    position:fixed;
-    width:300px;
-    height:300px;
-    border-radius:50%;
-    filter:blur(120px);
-    z-index:-1;
-}
-
-body::before{
-    background:#7fffd4;
-    top:-100px;
-    left:-100px;
-}
-
-body::after{
-    background:#00ffff;
-    bottom:-100px;
-    right:-100px;
-}
-
 .menu{
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
     padding:18px;
     text-align:center;
 }
@@ -60,7 +37,7 @@ body::after{
 .menu a{
     color:white;
     text-decoration:none;
-    margin:0 18px;
+    margin:0 15px;
     font-size:18px;
     font-weight:bold;
     transition:.3s;
@@ -68,44 +45,49 @@ body::after{
 
 .menu a:hover{
     color:yellow;
-    text-shadow:0 0 15px yellow;
+    text-shadow:0 0 10px yellow;
 }
 
-.title{
+h1{
     text-align:center;
     color:white;
-    font-size:55px;
     margin-top:40px;
+    font-size:50px;
     text-shadow:0 0 20px white;
 }
 
-.subtitle{
+.sub{
     text-align:center;
     color:white;
-    margin:10px 0 35px;
+    margin:15px;
     font-size:20px;
 }
 
 .container{
     width:90%;
     max-width:700px;
-    margin:auto;
+    margin:40px auto;
 }
 
 .card{
     background:rgba(255,255,255,.18);
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
     border-radius:25px;
-    padding:35px;
-    border:1px solid rgba(255,255,255,.4);
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 .item{
     background:rgba(255,255,255,.15);
-    border-radius:18px;
+    border-radius:20px;
     padding:20px;
     margin:20px 0;
+    transition:.4s;
+}
+
+.item:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 20px white;
 }
 
 .item h2{
@@ -113,13 +95,40 @@ body::after{
     margin-bottom:10px;
 }
 
-.item p{
+.item p,
+.item a{
     color:white;
     font-size:20px;
+    text-decoration:none;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    color:white;
+    padding:25px;
+}
+
+.star{
+    position:fixed;
+    color:white;
+    animation:fall 6s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-20px) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="menu">
@@ -130,109 +139,74 @@ body::after{
 <a href="Contact.html">📞 ติดต่อ</a>
 </div>
 
-<h1 class="title">📞 CONTACT ME</h1>
-<p class="subtitle">✨ สามารถติดต่อได้ตามช่องทางด้านล่าง ✨</p>
+<h1>📞 CONTACT ME</h1>
+
+<p class="sub">
+สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+</p>
 
 <div class="container">
+
 <div class="card">
-    <div class="item">
-    <h2>📱 เบอร์โทรศัพท์</h2>
-    <p>061-4687186</p>
+
+<div class="item">
+<h2>📱 เบอร์โทรศัพท์</h2>
+<p>061-4687186</p>
 </div>
 
 <div class="item">
-    <h2>📷 Instagram</h2>
-    <p>
-        <a href="https://www.instagram.com/kaew_24.12.51"
-           target="_blank"
-           style="color:white;text-decoration:none;">
-           @kaew_24.12.51
-        </a>
-    </p>
+<h2>📷 Instagram</h2>
+<p>
+<a href="https://www.instagram.com/kaew_24.12.51" target="_blank">
+@kaew_24.12.51
+</a>
+</p>
 </div>
 
 <div class="item">
-    <h2>📧 E-mail</h2>
-    <p>
-        <a href="mailto:lookkaew24.com@gmail.com"
-           style="color:white;text-decoration:none;">
-           lookkaew24.com@gmail.com
-        </a>
-    </p>
+<h2>📧 E-mail</h2>
+<p>
+<a href="mailto:lookkaew24.com@gmail.com">
+lookkaew24.com@gmail.com
+</a>
+</p>
 </div>
 
 <div class="item">
-    <h2>💬 ช่องทางการติดต่อ</h2>
-    <p>
-        ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน 💚<br>
-        หากต้องการสอบถามข้อมูล ติดต่อ หรือพูดคุยเกี่ยวกับผลงาน
-        สามารถติดต่อผ่าน Instagram, โทรศัพท์ หรือ E-mail ได้ตลอด
-        ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์ของฉัน ✨
-    </p>
+<h2>💚 ข้อความ</h2>
+<p>
+ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน
+หากต้องการสอบถามข้อมูลหรือพูดคุยเกี่ยวกับผลงาน
+สามารถติดต่อได้ทุกช่องทางด้านบน
+</p>
 </div>
 
 </div>
+
 </div>
+
 <footer>
-    <h2>💚 Thank You For Visiting 💚</h2>
-    <p>Portfolio by Siriporn</p>
-    <p>© 2026 All Rights Reserved</p>
+<h2>💚 Portfolio by Siriporn 💚</h2>
+<p>© 2026 All Rights Reserved</p>
 </footer>
 
-<style>
-footer{
-    margin-top:40px;
-    text-align:center;
-    color:white;
-    padding:30px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(15px);
-    border-top:1px solid rgba(255,255,255,.3);
-}
-
-footer h2{
-    margin-bottom:10px;
-    text-shadow:0 0 15px white;
-}
-
-.sparkle{
-    position:fixed;
-    color:white;
-    pointer-events:none;
-    animation:fall 6s linear forwards;
-}
-
-@keyframes fall{
-    from{
-        transform:translateY(-30px) rotate(0deg);
-        opacity:1;
-    }
-    to{
-        transform:translateY(110vh) rotate(360deg);
-        opacity:0;
-    }
-}
-</style>
-
 <script>
-// เอฟเฟกต์ประกาย
 setInterval(function(){
 
-    let star=document.createElement("div");
-    star.className="sparkle";
+let star=document.createElement("div");
+star.className="star";
 
-    const icons=["✨","💚","⭐","🌿","💎"];
-    star.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+let icon=["✨","⭐","💚","🌿","💎"];
+star.innerHTML=icon[Math.floor(Math.random()*icon.length)];
 
-    star.style.left=Math.random()*100+"vw";
-    star.style.top="-30px";
-    star.style.fontSize=(15+Math.random()*20)+"px";
+star.style.left=Math.random()*100+"vw";
+star.style.fontSize=(15+Math.random()*20)+"px";
 
-    document.body.appendChild(star);
+document.body.appendChild(star);
 
-    setTimeout(function(){
-        star.remove();
-    },6000);
+setTimeout(function(){
+star.remove();
+},6000);
 
 },250);
 </script>
