@@ -17,7 +17,7 @@ body{
     min-height:100vh;
     background:linear-gradient(-45deg,#00c9a7,#00b4d8,#90ee90,#00d084);
     background-size:400% 400%;
-    animation:bg 15s ease infinite;
+    animation:bg 12s ease infinite;
     overflow-x:hidden;
 }
 
@@ -31,8 +31,8 @@ body::before,
 body::after{
     content:"";
     position:fixed;
-    width:350px;
-    height:350px;
+    width:300px;
+    height:300px;
     border-radius:50%;
     filter:blur(120px);
     z-index:-1;
@@ -46,8 +46,8 @@ body::before{
 
 body::after{
     background:#00ffff;
-    bottom:-120px;
-    right:-120px;
+    bottom:-100px;
+    right:-100px;
 }
 
 .menu{
@@ -55,8 +55,6 @@ body::after{
     backdrop-filter:blur(20px);
     padding:18px;
     text-align:center;
-    position:sticky;
-    top:0;
 }
 
 .menu a{
@@ -79,18 +77,12 @@ body::after{
     font-size:55px;
     margin-top:40px;
     text-shadow:0 0 20px white;
-    animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-    from{ text-shadow:0 0 10px white; }
-    to{ text-shadow:0 0 30px cyan; }
 }
 
 .subtitle{
     text-align:center;
     color:white;
-    margin:10px 0 40px;
+    margin:10px 0 35px;
     font-size:20px;
 }
 
@@ -103,23 +95,17 @@ body::after{
 .card{
     background:rgba(255,255,255,.18);
     backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.4);
     border-radius:25px;
     padding:35px;
+    border:1px solid rgba(255,255,255,.4);
     box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
 .item{
     background:rgba(255,255,255,.15);
-    border-radius:20px;
+    border-radius:18px;
     padding:20px;
     margin:20px 0;
-    transition:.4s;
-}
-
-.item:hover{
-    transform:scale(1.03);
-    box-shadow:0 0 20px white;
 }
 
 .item h2{
@@ -130,30 +116,6 @@ body::after{
 .item p{
     color:white;
     font-size:20px;
-}
-
-.sparkle{
-    position:fixed;
-    color:white;
-    pointer-events:none;
-    animation:fall 6s linear forwards;
-}
-
-@keyframes fall{
-    from{
-        transform:translateY(-20px) rotate(0deg);
-        opacity:1;
-    }
-    to{
-        transform:translateY(110vh) rotate(360deg);
-        opacity:0;
-    }
-}
-
-footer{
-    text-align:center;
-    color:white;
-    padding:30px;
 }
 </style>
 </head>
@@ -211,30 +173,65 @@ footer{
 
 </div>
 </div>
-
 <footer>
     <h2>💚 Thank You For Visiting 💚</h2>
     <p>Portfolio by Siriporn</p>
     <p>© 2026 All Rights Reserved</p>
 </footer>
 
+<style>
+footer{
+    margin-top:40px;
+    text-align:center;
+    color:white;
+    padding:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    border-top:1px solid rgba(255,255,255,.3);
+}
+
+footer h2{
+    margin-bottom:10px;
+    text-shadow:0 0 15px white;
+}
+
+.sparkle{
+    position:fixed;
+    color:white;
+    pointer-events:none;
+    animation:fall 6s linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-30px) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style>
+
 <script>
+// เอฟเฟกต์ประกาย
 setInterval(function(){
 
-    let sparkle=document.createElement("div");
-    sparkle.className="sparkle";
+    let star=document.createElement("div");
+    star.className="sparkle";
 
-    let icons=["✨","💚","⭐","🌿"];
-    sparkle.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+    const icons=["✨","💚","⭐","🌿","💎"];
+    star.innerHTML=icons[Math.floor(Math.random()*icons.length)];
 
-    sparkle.style.left=Math.random()*100+"vw";
-    sparkle.style.top="-30px";
-    sparkle.style.fontSize=(15+Math.random()*25)+"px";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top="-30px";
+    star.style.fontSize=(15+Math.random()*20)+"px";
 
-    document.body.appendChild(sparkle);
+    document.body.appendChild(star);
 
     setTimeout(function(){
-        sparkle.remove();
+        star.remove();
     },6000);
 
 },250);
